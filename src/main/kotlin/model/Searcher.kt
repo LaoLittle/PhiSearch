@@ -3,6 +3,7 @@ package org.laolittle.plugin.model
 import kotlinx.serialization.ExperimentalSerializationApi
 import net.mamoe.mirai.contact.Contact.Companion.uploadImage
 import net.mamoe.mirai.event.GlobalEventChannel
+import net.mamoe.mirai.event.events.MessageEvent
 import net.mamoe.mirai.event.subscribeMessages
 import net.mamoe.mirai.event.whileSelectMessages
 import net.mamoe.mirai.message.data.PlainText
@@ -16,7 +17,7 @@ object Searcher : Service() {
 
     override suspend fun main() {
         GlobalEventChannel.subscribeMessages {
-            finding(Regex("定数查询")) {
+            finding(Regex("定数")) {
                 subject.sendMessage("请输入歌曲名称")
                 whileSelectMessages {
                     default {
@@ -53,7 +54,7 @@ object Searcher : Service() {
                             }
                             else -> {
                                 subject.sendMessage(name + "找到${results}个结果，请输入序号查询")
-                                whileSelectMessages {
+                                whileSelectMessages<MessageEvent> {
                                     default Here@{ msg ->
                                         if (Regex("""\D""").containsMatchIn(msg))
                                             subject.sendMessage("请输入数字 !")
