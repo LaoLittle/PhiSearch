@@ -9,13 +9,7 @@ import org.laolittle.plugin.model.Song
 import java.io.*
 import java.util.jar.JarFile
 
-typealias songTable = Map<Int, Song>
-typealias songOrder = Map<Int, Int>
-
-var order: songOrder = linkedMapOf()
-var songInfo: songTable = linkedMapOf()
-var results: Int = 0
-var name: String = ""
+var songInfo: Map<Int, Song> = linkedMapOf()
 
 @ExperimentalSerializationApi
 fun decodeJson() {

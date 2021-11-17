@@ -15,6 +15,10 @@ import java.io.File
 @ExperimentalSerializationApi
 object Searcher : Service() {
 
+    private var name: String = ""
+    private var order: Map<Int, Int> = linkedMapOf()
+    private var results: Int = 0
+
     override suspend fun main() {
         GlobalEventChannel.subscribeMessages {
             finding(Regex("定数")) {
@@ -87,7 +91,6 @@ object Searcher : Service() {
                                 }
                             }
                         }
-
                         false
                     }
                     timeout(12000) {
