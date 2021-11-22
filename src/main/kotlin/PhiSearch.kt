@@ -13,7 +13,7 @@ import org.laolittle.plugin.utils.init
 object PhiSearch : KotlinPlugin(
     JvmPluginDescription(
         id = "org.laolittle.plugin.FuzzySearch",
-        version = "1.0",
+        version = "1.0.1",
         name = "PhiSearch"
     )
 ) {

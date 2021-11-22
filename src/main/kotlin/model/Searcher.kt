@@ -7,6 +7,7 @@ import net.mamoe.mirai.event.events.MessageEvent
 import net.mamoe.mirai.event.subscribeMessages
 import net.mamoe.mirai.event.whileSelectMessages
 import net.mamoe.mirai.message.data.PlainText
+import net.mamoe.mirai.message.data.buildMessageChain
 import org.laolittle.plugin.PhiSearch.dataFolder
 import org.laolittle.plugin.Service
 import org.laolittle.plugin.utils.*
@@ -21,7 +22,7 @@ object Searcher : Service() {
 
     override suspend fun main() {
         GlobalEventChannel.subscribeMessages {
-            finding(Regex("定数")) {
+            startsWith("定数查询") {
                 subject.sendMessage("请输入歌曲名称")
                 whileSelectMessages {
                     default {
@@ -40,21 +41,15 @@ object Searcher : Service() {
                         when (results) {
                             0 -> subject.sendMessage("未找到结果! ")
                             1 -> {
+                                var result = buildMessageChain {
+                                    add(PlainText("${songInfo[order[results]]?.name}\n"))
+                                    add(PlainText("${songInfo[order[results]]?.description}\n"))
+                                }
                                 if (img(results).exists())
-                                    subject.sendMessage(
-                                        PlainText(
-                                            """
-                            ${songInfo[order[results]]?.name}
-                            ${songInfo[order[results]]?.description}
-                        """.trimIndent()
-                                        ).plus(subject.uploadImage(img(results)))
-                                    )
-                                else subject.sendMessage(
-                                    """
-                            ${songInfo[order[results]]?.name}
-                            ${songInfo[order[results]]?.description}
-                        """.trimIndent()
-                                )
+                                    result += buildMessageChain {
+                                        add(subject.uploadImage(img(results)))
+                                    }
+                                subject.sendMessage(result)
                             }
                             else -> {
                                 subject.sendMessage(name + "找到${results}个结果，请输入序号查询")
@@ -65,21 +60,15 @@ object Searcher : Service() {
                                         else if ((msg.toInt() > results) or (msg.toInt() <= 0))
                                             subject.sendMessage("请输入正确的数字 !")
                                         else {
+                                            var result = buildMessageChain {
+                                                add(PlainText("${songInfo[order[msg.toInt()]]?.name}\n"))
+                                                add(PlainText("${songInfo[order[msg.toInt()]]?.description}\n"))
+                                            }
                                             if (img(msg.toInt()).exists())
-                                                subject.sendMessage(
-                                                    PlainText(
-                                                        """
-                                                ${songInfo[order[msg.toInt()]]?.name}
-                                                ${songInfo[order[msg.toInt()]]?.description}
-                                            """.trimIndent()
-                                                    ).plus(subject.uploadImage(img(msg.toInt())))
-                                                )
-                                            else subject.sendMessage(
-                                                """
-                                                ${songInfo[order[msg.toInt()]]?.name}
-                                                ${songInfo[order[msg.toInt()]]?.description}
-                                            """.trimIndent()
-                                            )
+                                                result += buildMessageChain {
+                                                    add(subject.uploadImage(img(msg.toInt())))
+                                                }
+                                            subject.sendMessage(result)
                                             return@Here false
                                         }
                                         true
