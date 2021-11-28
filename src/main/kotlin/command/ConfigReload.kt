@@ -9,7 +9,7 @@ import org.laolittle.plugin.utils.decodeJson
 @ExperimentalSerializationApi
 object ConfigReload : SimpleCommand(
     PhiSearch, "fsreload",
-    description = "FuzzySearch配置重载"
+    description = "PhiSearch配置重载"
 ) {
 
     @Handler
