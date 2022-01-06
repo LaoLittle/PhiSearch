@@ -71,4 +71,4 @@ internal fun HashMap<Int, Song>.fuzzySearchSong(
     }
 }
 
-private fun String.toLowerCase() = this.lowercase(Locale.getDefault())
+private fun String.toLowerCase() = lowercase(Locale.getDefault())

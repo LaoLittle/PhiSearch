@@ -17,17 +17,17 @@ fun decodeJson() {
 }
 
 fun HashMap<Int, Song>.search(name: String): List<Pair<Song, Int>> {
-    val candidates = this.fuzzySearchSong(name)
-    val maxPerMember = mutableListOf<Pair<Song, Int>>()
+    val candidates = fuzzySearchSong(name)
+    val maxSong = mutableListOf<Pair<Song, Int>>()
     candidates.forEach {
         for (i in this) {
             if (i.value.name == it.first.name) {
-                maxPerMember.add(it.first to i.key)
+                maxSong.add(it.first to i.key)
                 break
             }
         }
     }
-    return maxPerMember
+    return maxSong
 }
 
 @ExperimentalSerializationApi

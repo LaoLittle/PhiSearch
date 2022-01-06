@@ -33,11 +33,13 @@ object PhiSearch : KotlinPlugin(
         init()
         ConfigReload.register()
         globalEventChannel().subscribeMessages {
-            startsWith("定数查询") {
-                subject.sendMessage("请输入歌曲名称")
-                val name = runCatching { nextMessage(30_000) }.onFailure { subject.sendMessage("超时未输入") }
+            startsWith("查询定数") {
+                val name = runCatching { if (it.isNotBlank()) it.replace(" ", "") else {
+                    subject.sendMessage("请输入歌曲名称")
+                    nextMessage(30_000).content
+                } }.onFailure { subject.sendMessage("超时未输入") }
                     .getOrElse { return@startsWith }
-                val info: List<Pair<Song, Int>> = songInfo.search(name.content)
+                val info: List<Pair<Song, Int>> = songInfo.search(name)
                 when (info.size) {
                     0 -> subject.sendMessage("未找到结果! ")
                     1 -> {
@@ -54,7 +56,7 @@ object PhiSearch : KotlinPlugin(
                             var order = 0
                             info.forEach {
                                 order++
-                                add("$order${it.first.name}\n")
+                                add("$order.${it.first.name}\n")
                             }
                             add("找到${order}个结果，请输入序号查询")
                         })
