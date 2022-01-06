@@ -15,6 +15,6 @@ object ConfigReload : SimpleCommand(
     @Handler
     suspend fun CommandSender.handle() {
         decodeJson()
-        sendMessage("配置重载")
+        sendMessage("配置重载成功")
     }
 }

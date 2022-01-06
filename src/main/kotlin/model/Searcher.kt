@@ -1,90 +1,70 @@
 package org.laolittle.plugin.model
 
+import kotlinx.coroutines.TimeoutCancellationException
 import kotlinx.serialization.ExperimentalSerializationApi
 import net.mamoe.mirai.contact.Contact.Companion.uploadImage
-import net.mamoe.mirai.event.GlobalEventChannel
-import net.mamoe.mirai.event.events.MessageEvent
+import net.mamoe.mirai.event.globalEventChannel
 import net.mamoe.mirai.event.subscribeMessages
-import net.mamoe.mirai.event.whileSelectMessages
 import net.mamoe.mirai.message.data.PlainText
 import net.mamoe.mirai.message.data.buildMessageChain
+import net.mamoe.mirai.message.data.content
+import net.mamoe.mirai.message.nextMessage
+import org.laolittle.plugin.PhiSearch
 import org.laolittle.plugin.PhiSearch.dataFolder
 import org.laolittle.plugin.Service
-import org.laolittle.plugin.utils.*
+import org.laolittle.plugin.utils.search
+import org.laolittle.plugin.utils.songInfo
 import java.io.File
 
 @ExperimentalSerializationApi
 object Searcher : Service() {
 
-    private var name: String = ""
-    private var order: Map<Int, Int> = linkedMapOf()
-    private var results: Int = 0
-
     override suspend fun main() {
-        GlobalEventChannel.subscribeMessages {
+        PhiSearch.globalEventChannel().subscribeMessages {
             startsWith("定数查询") {
                 subject.sendMessage("请输入歌曲名称")
-                whileSelectMessages {
-                    default {
-                        results = 0
-                        var info: Song?
-                        name = ""
-                        for (i in 0 until songInfo.size) {
-                            info = search(it, i)
-                            if (info != null) {
-                                results++
-                                order = order.plus(Pair(results, i))
-                                name += "$results.${info.name}\n"
-                            }
+                val name = runCatching { nextMessage(30_000) }.onFailure { subject.sendMessage("超时未输入") }
+                    .getOrElse { return@startsWith }
+                val info: List<Pair<Song, Int>> = songInfo.search(name.content)
+                when (info.size) {
+                    0 -> subject.sendMessage("未找到结果! ")
+                    1 -> {
+                        val result = buildMessageChain {
+                            add(PlainText("${info[0].first.name}\n"))
+                            add(PlainText("${info[0].first.name}\n"))
+                            val imageFile = img(info[0].second)
+                            if (imageFile.exists()) add(subject.uploadImage(imageFile))
                         }
-
-                        when (results) {
-                            0 -> subject.sendMessage("未找到结果! ")
-                            1 -> {
-                                var result = buildMessageChain {
-                                    add(PlainText("${songInfo[order[results]]?.name}\n"))
-                                    add(PlainText("${songInfo[order[results]]?.description}\n"))
-                                }
-                                if (img(results).exists())
-                                    result += buildMessageChain {
-                                        add(subject.uploadImage(img(results)))
-                                    }
-                                subject.sendMessage(result)
-                            }
-                            else -> {
-                                subject.sendMessage(name + "找到${results}个结果，请输入序号查询")
-                                whileSelectMessages<MessageEvent> {
-                                    default Here@{ msg ->
-                                        if (Regex("""\D""").containsMatchIn(msg))
-                                            subject.sendMessage("请输入数字 !")
-                                        else if ((msg.toInt() > results) or (msg.toInt() <= 0))
-                                            subject.sendMessage("请输入正确的数字 !")
-                                        else {
-                                            var result = buildMessageChain {
-                                                add(PlainText("${songInfo[order[msg.toInt()]]?.name}\n"))
-                                                add(PlainText("${songInfo[order[msg.toInt()]]?.description}\n"))
-                                            }
-                                            if (img(msg.toInt()).exists())
-                                                result += buildMessageChain {
-                                                    add(subject.uploadImage(img(msg.toInt())))
-                                                }
-                                            subject.sendMessage(result)
-                                            return@Here false
-                                        }
-                                        true
-                                    }
-                                    timeout(8000) {
-                                        subject.sendMessage("超时未输入")
-                                        false
-                                    }
-                                }
-                            }
-                        }
-                        false
+                        subject.sendMessage(result)
                     }
-                    timeout(12000) {
-                        subject.sendMessage("超时未输入")
-                        false
+                    else -> {
+                        subject.sendMessage(buildMessageChain {
+                            var order = 0
+                            info.forEach {
+                                order++
+                                add("$order${it.first.name}\n")
+                            }
+                            add("找到${order}个结果，请输入序号查询")
+                        })
+                        val number = try {
+                            nextMessage(12_000).content.toInt() - 1
+                        } catch (_: NumberFormatException) {
+                            subject.sendMessage("请输入数字 !")
+                            return@startsWith
+                        } catch (_: TimeoutCancellationException) {
+                            subject.sendMessage("超时未输入")
+                            return@startsWith
+                        }
+                        if (number > info.size - 1 || number < 0) subject.sendMessage("请输入正确的数字 !")
+                        else {
+                            val result = buildMessageChain {
+                                add(PlainText("${info[number].first.name}\n"))
+                                add(PlainText("${info[number].first.description}\n"))
+                                val imageFile = img(info[number].second)
+                                if (imageFile.exists()) add(subject.uploadImage(imageFile))
+                            }
+                            subject.sendMessage(result)
+                        }
                     }
                 }
             }
@@ -92,6 +72,6 @@ object Searcher : Service() {
     }
 
     private fun img(i: Int): File {
-        return File("$dataFolder/SongImg").resolve("${order[i]}.png")
+        return File("$dataFolder/SongImg").resolve("${i}.png")
     }
 }

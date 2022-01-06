@@ -6,40 +6,40 @@ import org.laolittle.plugin.PhiSearch
 import org.laolittle.plugin.PhiSearch.dataFolder
 import org.laolittle.plugin.model.Json
 import org.laolittle.plugin.model.Song
-import java.io.*
-import java.util.jar.JarFile
+import java.io.BufferedOutputStream
+import java.io.FileOutputStream
 
-var songInfo: Map<Int, Song> = linkedMapOf()
+var songInfo: LinkedHashMap<Int, Song> = linkedMapOf()
 
 @ExperimentalSerializationApi
 fun decodeJson() {
     songInfo = Json.decodeFromString(dataFolder.resolve("Songs.json").readText())
 }
 
-fun search(name: String, i: Int): Song? {
-    if ((Regex(name, RegexOption.IGNORE_CASE).containsMatchIn("${songInfo[i]?.name}")))
-        return songInfo[i]
-    return null
+fun HashMap<Int, Song>.search(name: String): List<Pair<Song, Int>> {
+    val candidates = this.fuzzySearchSong(name)
+    val maxPerMember = mutableListOf<Pair<Song, Int>>()
+    println(candidates)
+    candidates.forEach {
+        for (i in this) {
+            if (i.value.name == it.first.name) {
+                maxPerMember.add(it.first to i.key)
+            }
+        }
+    }
+    return maxPerMember
 }
 
 @ExperimentalSerializationApi
-fun init(){
-    if(dataFolder.resolve("Songs.json").exists())
+fun init() {
+    if (dataFolder.resolve("Songs.json").exists())
         decodeJson()
     else {
-        selfRead().use { input ->
+        PhiSearch.javaClass.getResourceAsStream("/data/Songs.json").use { input ->
             BufferedOutputStream(FileOutputStream(dataFolder.resolve("Songs.json"))).use {
                 input?.copyTo(it)
             }
         }
         decodeJson()
     }
-}
-
-@ExperimentalSerializationApi
-private fun selfRead(): InputStream? {
-    val path = PhiSearch.javaClass.protectionDomain.codeSource.location.path
-    val jarpath = JarFile(path)
-    val entry = jarpath.getJarEntry("data/Songs.json")
-    return jarpath.getInputStream(entry)
 }
