@@ -31,7 +31,7 @@ object Searcher : Service() {
                     1 -> {
                         val result = buildMessageChain {
                             add(PlainText("${info[0].first.name}\n"))
-                            add(PlainText("${info[0].first.name}\n"))
+                            add(PlainText("${info[0].first.description}\n"))
                             val imageFile = img(info[0].second)
                             if (imageFile.exists()) add(subject.uploadImage(imageFile))
                         }

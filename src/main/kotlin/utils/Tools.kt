@@ -19,7 +19,6 @@ fun decodeJson() {
 fun HashMap<Int, Song>.search(name: String): List<Pair<Song, Int>> {
     val candidates = this.fuzzySearchSong(name)
     val maxPerMember = mutableListOf<Pair<Song, Int>>()
-    println(candidates)
     candidates.forEach {
         for (i in this) {
             if (i.value.name == it.first.name) {
