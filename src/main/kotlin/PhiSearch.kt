@@ -24,7 +24,7 @@ import java.io.File
 object PhiSearch : KotlinPlugin(
     JvmPluginDescription(
         id = "org.laolittle.plugin.FuzzySearch",
-        version = "1.0.1",
+        version = "1.1.0",
         name = "PhiSearch"
     )
 ) {

@@ -23,6 +23,7 @@ fun HashMap<Int, Song>.search(name: String): List<Pair<Song, Int>> {
         for (i in this) {
             if (i.value.name == it.first.name) {
                 maxPerMember.add(it.first to i.key)
+                break
             }
         }
     }
