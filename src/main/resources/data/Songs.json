@@ -1,158 +1,554 @@
 {
-  "0": {
-    "name": "Chronomia",
-    "description": "IN: 15.3"
-  },
-  "1": {
-    "name": "Glaciaxion",
-    "description": "IN: 12.5 Legacy: 11.2"
-  },
-  "2": {
-    "name": "Eradication Catastrophe",
-    "description": "IN: 11.6"
-  },
-  "3": {
-    "name": "Credits",
-    "description": "IN: 13.7"
-  },
-  "4": {
-    "name": "Dlyrotz",
-    "description": "IN: 14.6"
-  },
-  "5": {
-    "name": "Engine x Start!! (melody mix)",
-    "description": "IN: 13.4 Legacy: 15.2"
-  },
-  "6": {
-    "name": "光",
-    "description": "IN: 12.8 Legacy: 13.8"
-  },
-  "7": {
-    "name": "Winter↑cube↓",
-    "description": "IN: 13.4 Legacy: 13.4"
-  },
-  "8": {
-    "name": "Cipher: /2&//<|0",
-    "description": "IN: 14.7"
-  },
-  "9": {
-    "name": "混乱-Confusion",
-    "description": "IN: 14.8"
-  },
-  "10": {
-    "name": "FULi AUTO SHOOTER",
-    "description": "IN: 14.8"
-  },
-  "11": {
-    "name": "HumaN",
-    "description": "IN: 12.6 Legacy: 12.9"
-  },
-  "12": {
-    "name": "[PRAW]",
-    "description": "IN: 14.9 Legacy: 13.9"
-  },
-  "13": {
-    "name": "Pixel Rebelz",
-    "description": "IN: 15.2 Legacy: 14.6"
-  },
-  "14": {
-    "name": "Cereris",
-    "description": "IN: 14.8"
-  },
-  "15": {
-    "name": "Non-Melodic Ragez",
-    "description": "IN: 15.8 Legacy: 15.8"
-  },
-  "16": {
-    "name": "Sultan Rage",
-    "description": "IN: 12.5"
-  },
-  "17": {
-    "name": "Class Memories",
-    "description": "IN: 13.5"
-  },
-  "18": {
-    "name": "-SURREALISM-",
-    "description": "IN: 13.4"
-  },
-  "19": {
-    "name": "Bonus Time",
-    "description": "IN: 14.2 Legacy: 13.5"
-  },
-  "20": {
-    "name": "ENERGY SYNERGY MATRIX",
-    "description": "IN: 14.8 Legacy: 14.8"
-  },
-  "21": {
-    "name": "NYA!!!",
-    "description": "IN: 12.9"
-  },
-  "22": {
-    "name": "JunXion Between Life And Death(VIP Mix)",
-    "description": "IN: 13.3"
-  },
-  "23": {
-    "name": "cryout",
-    "description": "IN: 13.7"
-  },
-  "24": {
-    "name": "Reimei",
-    "description": "IN: 15.1"
-  },
-  "25": {
-    "name": "尊師 ～The Guru～",
-    "description": "IN: 15.2"
-  },
-  "26": {
-    "name": "Spasmodic",
-    "description": "IN: 15.2"
-  },
-  "27": {
-    "name": "Leave All Behind",
-    "description": "IN: 12.7"
-  },
-  "28": {
-    "name": "Colorful Days♪",
-    "description": "IN: 12.7"
-  },
-  "29": {
-    "name": "micro.wav",
-    "description": "IN: 14.5"
-  },
-  "30": {
-    "name": "重生",
-    "description": "IN: 14.6"
-  },
-  "31": {
-    "name": "NO ONE YES MAN",
-    "description": "IN: 15.4"
-  },
-  "32": {
-    "name": "望影の方舟Six",
-    "description": "IN: 15.7"
-  },
-  "33": {
-    "name": "Igallta",
-    "description": "IN: 15.6"
-  },
-  "34": {
-    "name": "Clock Paradox",
-    "description": "IN: 12.6"
-  },
-  "35": {
-    "name": "Chronologika",
-    "description": "IN: 13.9"
-  },
-  "36": {
-    "name": "Nick of Time",
-    "description": "IN: 14.4"
-  },
-  "37": {
-    "name": "Chronos Collapse - La Campanella",
-    "description": "IN: 15.9"
-  },
-  "38": {
-    "name": "Rrhar'il",
-    "description": "IN: 15.7"
-  }
+    "0": {
+        "name": "Glaciaxion",
+        "description": "EZ:1.1 HD:6.7 IN:12.5 Legacy:11.2\n所属章节:Chapter Legacy 过去的章节\n长度:2:43"
+    },
+    "1": {
+        "name": "Eradication Catastrophe",
+        "description": "EZ:3.5 HD:7.5 IN:11.6\n所属章节:Chapter Legacy 过去的章节\n长度:2:07"
+    },
+    "2": {
+        "name": "Credits",
+        "description": "EZ:4.4 HD:10.4 IN:13.7\n所属章节:Chapter Legacy 过去的章节\n长度:1:41"
+    },
+    "3": {
+        "name": "Dlyrotz",
+        "description": "EZ:6.5 HD:11.7 IN:14.6\n所属章节:Chapter Legacy 过去的章节\n长度:2:02"
+    },
+    "4": {
+        "name": "Engine x Start!! (melody mix)",
+        "description": "EZ:4.7 HD:10.5 IN:13.4 Legacy:15.2\n所属章节:Chapter Legacy 过去的章节\n长度:1:32"
+    },
+    "5": {
+        "name": "光",
+        "description": "EZ:4.9 HD:8.4 IN:12.8 Legacy:13.8\n所属章节:Chapter Legacy 过去的章节\n长度:2:12"
+    },
+    "6": {
+        "name": "Winter↑Cube↓",
+        "description": "EZ:6.7 HD:10.7 IN:13.4 Legacy:13.4\n所属章节:Chapter Legacy 过去的章节\n长度:2:36"
+    },
+    "7": {
+        "name": "混乱-Confusion",
+        "description": "EZ:5.3 HD:11.4 IN:14.8 Legacy:13.9\n所属章节:Chapter Legacy 过去的章节\n长度:2:08"
+    },
+    "8": {
+        "name": "Cipher : /2&//<|0",
+        "description": "EZ:6.8 HD:10.8 IN:14.7\n所属章节:Chapter Legacy 过去的章节\n长度:2:34"
+    },
+    "9": {
+        "name": "FULi AUTO SHOOTER",
+        "description": "EZ:4.1 HD:11.3 IN:14.8\n所属章节:Chapter Legacy 过去的章节\n长度:2:10"
+    },
+    "10": {
+        "name": "HumaN",
+        "description": "EZ:5.6 HD:8.8 IN:12.6 Legacy:12.9\n所属章节:Chapter Legacy 过去的章节\n长度:2:14"
+    },
+    "11": {
+        "name": "[PRAW]",
+        "description": "EZ:4.4 HD:11.8 IN:14.9 Legacy:13.9\n所属章节:Chapter Legacy 过去的章节\n长度:2:37"
+    },
+    "12": {
+        "name": "Cereris",
+        "description": "EZ:6.9 HD:10.5 IN:14.8\n所属章节:Chapter Legacy 过去的章节\n长度:2:48"
+    },
+    "13": {
+        "name": "Pixel Rebelz",
+        "description": "EZ:4.5 HD:11.9 IN:15.2 Legacy:14.6\n所属章节:Chapter Legacy 过去的章节\n长度:2:23"
+    },
+    "14": {
+        "name": "Non-Melodic Ragez",
+        "description": "EZ:5.8 HD:10.5 IN:15.8 Legacy:15.8\n所属章节:Chapter Legacy 过去的章节\n长度:2:19"
+    },
+    "15": {
+        "name": "Sultan Rage",
+        "description": "EZ:3.9 HD:8.5 IN:12.5\n所属章节:Chapter 4 管道迷宫\n长度:1:56"
+    },
+    "16": {
+        "name": "Class Memories",
+        "description": "EZ:4.5 HD:8.9 IN:13.5\n所属章节:Chapter 4 管道迷宫\n长度:2:27"
+    },
+    "17": {
+        "name": "-SURREALISM-",
+        "description": "EZ:4.6 HD:7.7 IN:13.4\n所属章节:Chapter 4 管道迷宫\n长度:2:34"
+    },
+    "18": {
+        "name": "Bonus Time",
+        "description": "EZ:4.7 HD:9.3 IN:14.2 Legacy:13.5\n所属章节:Chapter 4 管道迷宫\n长度:1:55"
+    },
+    "19": {
+        "name": "ENERGY SYNERGY MATRIX",
+        "description": "EZ:5.9 HD:10.7 IN:14.8 Legacy:14.8\n所属章节:Chapter 4 管道迷宫\n长度:2:05"
+    },
+    "20": {
+        "name": "NYA!!!",
+        "description": "EZ:1.8 HD:8.6 IN:12.9\n所属章节:Chapter 5 霓虹灯牌\n长度:2:36"
+    },
+    "21": {
+        "name": "JunXion Between Life And Death(VIP Mix)",
+        "description": "EZ:3.2 HD:8.7 IN:13.3\n所属章节:Chapter 5 霓虹灯牌\n长度:2:23"
+    },
+    "22": {
+        "name": "cryout",
+        "description": "EZ:4.3 HD:9.9 IN:13.7\n所属章节:Chapter 5 霓虹灯牌\n长度:2:06"
+    },
+    "23": {
+        "name": "Reimei",
+        "description": "EZ:6.8 HD:11.9 IN:15.1\n所属章节:Chapter 5 霓虹灯牌\n长度:2:26"
+    },
+    "24": {
+        "name": "尊師 ～The Guru～",
+        "description": "EZ:3.6 HD:9.4 IN:15.2\n所属章节:Chapter 5 霓虹灯牌\n长度:2:09"
+    },
+    "25": {
+        "name": "Spasmodic",
+        "description": "EZ:7.9 HD:12.6 IN:15.2 AT:16.4\n所属章节:Chapter 5 霓虹灯牌\n长度:2:35"
+    },
+    "26": {
+        "name": "Leave All Behind",
+        "description": "EZ:2.5 HD:6.4 IN:12.7\n所属章节:Chapter 5 霓虹灯牌\n长度:2:07"
+    },
+    "27": {
+        "name": "Colorful Days♪",
+        "description": "EZ:4.6 HD:7.1 IN:12.7\n所属章节:Chapter 6 方舟蜃景\n长度:1:40"
+    },
+    "28": {
+        "name": "micro.wav",
+        "description": "EZ:6.2 HD:10.7 IN:14.5\n所属章节:Chapter 6 方舟蜃景\n长度:2:40"
+    },
+    "29": {
+        "name": "重生",
+        "description": "EZ:5.8 HD:9.3 IN:14.6\n所属章节:Chapter 6 方舟蜃景\n长度:2:23"
+    },
+    "30": {
+        "name": "NO ONE YES MAN",
+        "description": "EZ:5.5 HD:11.8 IN:15.4\n所属章节:Chapter 6 方舟蜃景\n长度:2:41"
+    },
+    "31": {
+        "name": "望影の方舟Six",
+        "description": "EZ:6.3 HD:12.9 IN:15.7\n所属章节:Chapter 6 方舟蜃景\n长度:1:53"
+    },
+    "32": {
+        "name": "Igallta",
+        "description": "EZ:7.7 HD:12.7 IN:15.6 AT:16.7\n所属章节:Chapter 6 方舟蜃景\n长度:2:20"
+    },
+    "33": {
+        "name": "Clock Paradox",
+        "description": "EZ:2.3 HD:5.8 IN:12.6\n所属章节:Chapter 7 时钟链接\n长度:2:30"
+    },
+    "34": {
+        "name": "Chronologika",
+        "description": "EZ:3.7 HD:9.8 IN:13.9\n所属章节:Chapter 7 时钟链接\n长度:2:14"
+    },
+    "35": {
+        "name": "Nick of Time",
+        "description": "EZ:4.4 HD:8.1 IN:14.4\n所属章节:Chapter 7 时钟链接\n长度:2:22"
+    },
+    "36": {
+        "name": "Chronomia",
+        "description": "EZ:4.7 HD:10.4 IN:15.3\n所属章节:Chapter 7 时钟链接\n长度:2:26"
+    },
+    "37": {
+        "name": "Chronos Collapse - La Campanella",
+        "description": "EZ:2.8 HD:10.6 IN:15.9\n所属章节:Chapter 7 时钟链接\n长度:2:33"
+    },
+    "38": {
+        "name": "Rrhar'il",
+        "description": "EZ:7.2 HD:12.7 IN:15.7 AT:16.8\n所属章节:Chapter 7 时钟链接\n长度:2:12"
+    },
+    "39": {
+        "name": "Ποσειδών",
+        "description": "EZ:4.7 HD:8.4 IN:12.8\n所属章节:Side Story 1 忘忧宫\n长度:2:03"
+    },
+    "40": {
+        "name": "WATER",
+        "description": "EZ:4.5 HD:9.4 IN:13.6\n所属章节:Side Story 1 忘忧宫\n长度:2:37"
+    },
+    "41": {
+        "name": "Miracle Forest (VIP Mix)",
+        "description": "EZ:2.6 HD:9.8 IN:13.7 Legacy:14.1\n所属章节:Side Story 1 忘忧宫\n长度:2:50"
+    },
+    "42": {
+        "name": "MOBILYS",
+        "description": "EZ:4.8 HD:9.7 IN:14.4\n所属章节:Side Story 1 忘忧宫\n长度:2:43"
+    },
+    "43": {
+        "name": "Lyrith -迷宮リリス-",
+        "description": "EZ:5.2 HD:11.6 IN:15.9 AT:16.3\n所属章节:Side Story 1 忘忧宫\n长度:2:27"
+    },
+    "44": {
+        "name": "Another Me",
+        "description": "EZ:1.7 HD:5.6 IN:13.6 Legacy:13.2\n所属章节:Chapter EX-Rising Sun Traxx 精选集\n长度:2:20"
+    },
+    "45": {
+        "name": "mechanted",
+        "description": "EZ:2.7 HD:11.3 IN:14.7\n所属章节:Chapter EX-Rising Sun Traxx 精选集\n长度:1:56"
+    },
+    "46": {
+        "name": "life flashes before weeb eyes",
+        "description": "EZ:6.6 HD:11.9 IN:14.8\n所属章节:Chapter EX-Rising Sun Traxx 精选集\n长度:2:37"
+    },
+    "47": {
+        "name": "Break Through The Barrier",
+        "description": "EZ:5.9 HD:10.8 IN:14.9 Legacy:15.1\n所属章节:Chapter EX-Rising Sun Traxx 精选集\n长度:2:12"
+    },
+    "48": {
+        "name": "Chronostasis",
+        "description": "EZ:6.8 HD:11.6 IN:15.9\n所属章节:Chapter EX-Rising Sun Traxx 精选集\n长度:2:23"
+    },
+    "49": {
+        "name": "Infinity Heaven",
+        "description": "EZ:3.3 HD:8.4 IN:13.6\n所属章节:Chapter EX-HyuN 精选集\n长度:2:35"
+    },
+    "50": {
+        "name": "Disorder",
+        "description": "EZ:5.4 HD:9.8 IN:14.7\n所属章节:Chapter EX-HyuN 精选集\n长度:2:14"
+    },
+    "51": {
+        "name": "CROSS†SOUL",
+        "description": "EZ:7.7 HD:12.8 IN:15.9\n所属章节:Chapter EX-HyuN 精选集\n长度:2:19"
+    },
+    "52": {
+        "name": "GOODTEK",
+        "description": "EZ:5.4 HD:10.8 IN:14.2\n所属章节:Chapter EX-GOOD精选集\n长度:2:06"
+    },
+    "53": {
+        "name": "GOODBOUNCE",
+        "description": "EZ:5.7 HD:11.6 IN:14.4\n所属章节:Chapter EX-GOOD精选集\n长度:2:13"
+    },
+    "54": {
+        "name": "GOODWORLD",
+        "description": "EZ:3.2 HD:11.4 IN:14.5\n所属章节:Chapter EX-GOOD精选集\n长度:2:12"
+    },
+    "55": {
+        "name": "GOODFORTUNE",
+        "description": "EZ:7.3 HD:8.7 IN:15.4\n所属章节:Chapter EX-GOOD精选集\n长度:2:13"
+    },
+    "56": {
+        "name": "GOODRAGE",
+        "description": "EZ:4.6 HD:7.8 IN:15.8\n所属章节:Chapter EX-GOOD精选集\n长度:2:02"
+    },
+    "57": {
+        "name": "Initialize",
+        "description": "EZ:2.5 HD:7.2 IN:11.6\n所属章节:Chapter EX-WAVEAT 精选集\n长度:2:11"
+    },
+    "58": {
+        "name": "桜樹街道",
+        "description": "EZ:3.6 HD:7.4 IN:12.6\n所属章节:Chapter EX-WAVEAT 精选集\n长度:2:24"
+    },
+    "59": {
+        "name": "Get Ready!!",
+        "description": "EZ:4.5 HD:8.7 IN:13.5\n所属章节:Chapter EX-WAVEAT 精选集\n长度:2:10"
+    },
+    "60": {
+        "name": "volcanic",
+        "description": "EZ:7.3 HD:11.9 IN:14.8 AT:16.2\n所属章节:Chapter EX-WAVEAT 精选集\n长度:2:17"
+    },
+    "61": {
+        "name": "XING",
+        "description": "EZ:5.5 HD:9.9 IN:13.8\n所属章节:Chapter EX-Muse Dash 精选集\n长度:2:16"
+    },
+    "62": {
+        "name": "Final Step!",
+        "description": "EZ:5.9 HD:11.8 IN:14.3\n所属章节:Chapter EX-Muse Dash 精选集\n长度:2:17"
+    },
+    "63": {
+        "name": "Cthugha",
+        "description": "EZ:7.2 HD:12.3 IN:15.7 AT:15.9\n所属章节:Chapter EX-Muse Dash 精选集\n长度:2:34"
+    },
+    "64": {
+        "name": "dB doll",
+        "description": "EZ:1.3 HD:3.6 IN:6.2 AT:13.6\n所属章节:单曲集\n长度:1:49"
+    },
+    "65": {
+        "name": "もぺもぺ(mopemope)",
+        "description": "EZ:3.4 HD:8.5 IN:11.1 AT:14.9 SP:?\n所属章节:单曲集\n长度:1:50\nSP谱面解锁方式:点击曲绘中女孩手里的花（1.4.1版本限定且系统时间需为xxxx.4.1）"
+    },
+    "66": {
+        "name": "-Arkhei-",
+        "description": "EZ:5.5 HD:9.7 IN:12.1\n所属章节:单曲集\n长度:2:37"
+    },
+    "67": {
+        "name": "Next Time",
+        "description": "EZ:4.8 HD:9.2 IN:12.6\n所属章节:单曲集\n长度:1:51"
+    },
+    "68": {
+        "name": "Dash from SOUL NOTES",
+        "description": "EZ:2.5 HD:5.7 IN:11.7 Legacy:11.5\n所属章节:单曲集\n长度:1:54"
+    },
+    "69": {
+        "name": "Rubbish Sorting",
+        "description": "EZ:3.3 HD:9.4 IN:12.8 SP:?\n所属章节:单曲集\n长度:2:46\n SP谱面解锁方式:从左到右依次点击曲绘中的4个垃圾桶（1.4.1版本限定且系统时间需为xxxx.4.1）"
+    },
+    "70": {
+        "name": "云女孩",
+        "description": "EZ:2.8 HD:9.9 IN:12.6 Legacy:12.8\n所属章节:单曲集\n长度:2:59"
+    },
+    "71": {
+        "name": "Sparkle New Life",
+        "description": "EZ:4.2 HD:9.2 IN:12.4\n所属章节:单曲集\n长度:2:18"
+    },
+    "72": {
+        "name": "Aphasia",
+        "description": "EZ:4.2 HD:8.8 IN:13.1\n所属章节:单曲集\n长度:1:56"
+    },
+    "73": {
+        "name": "Wavetapper",
+        "description": "EZ:4.4 HD:6.9 IN:13.8 SP:?\n所属章节:单曲集\n长度:2:42\n SP谱面解锁方式:按一定频率点击曲绘中的盒子（1.6.5/1.6.6版本限定且系统时间需为xxxx.4.1）"
+    },
+    "74": {
+        "name": "游园地",
+        "description": "EZ:2.8 HD:7.7 IN:13.2\n所属章节:单曲集\n长度:2:07"
+    },
+    "75": {
+        "name": "Apocalyptic",
+        "description": "EZ:32. HD:9.6 IN:13.4\n所属章节:单曲集\n长度:2:09"
+    },
+    "76": {
+        "name": "With You",
+        "description": "EZ:3.5 HD:9.3 IN:13.4\n所属章节:单曲集\n长度:2:06"
+    },
+    "77": {
+        "name": "萤火虫の怨",
+        "description": "EZ:4.3 HD:10.6 IN:13.1 Legacy:13.4\n所属章节:单曲集\n长度:2:38"
+    },
+    "78": {
+        "name": "Dead Soul",
+        "description": "EZ:4.3 HD:11.7 IN:14.4 SP:?\n所属章节:单曲集\n长度:2:27\nSP谱面解锁方式:狂点EZ难度标识（1.4.1版本限定且系统时间需为2020.4.1）"
+    },
+    "79": {
+        "name": "Snow Desert",
+        "description": "EZ:5.1 HD:9.6 IN:13.6\n所属章节:单曲集\n长度:2:23"
+    },
+    "80": {
+        "name": "Electron",
+        "description": "EZ:3.7 HD:10.4 IN:13.2\n所属章节:单曲集\n长度:2:09"
+    },
+    "81": {
+        "name": "万吨匿名信",
+        "description": "EZ:5.7 HD:9.7 IN:13.3 Legacy:13.6\n所属章节:单曲集\n长度:2:45"
+    },
+    "82": {
+        "name": "Äventyr",
+        "description": "EZ:2.3 HD:9.4 IN:13.7\n所属章节:单曲集\n长度:2:40"
+    },
+    "83": {
+        "name": "开心病",
+        "description": "EZ:3.7 HD:9.8 IN:14.4 Legacy:13.7\n所属章节:单曲集\n长度:1:55"
+    },
+    "84": {
+        "name": "风屿",
+        "description": "EZ:5.9 HD:10.3 IN:13.7\n所属章节:单曲集\n长度:2:59"
+    },
+    "85": {
+        "name": "Get Back",
+        "description": "EZ:6.6 HD:11.4 IN:13.8\n所属章节:单曲集\n长度:2:24"
+    },
+    "86": {
+        "name": "華灯爱",
+        "description": "EZ:5.5 HD:9.3 IN:14.1\n所属章节:单曲集\n长度:1:54"
+    },
+    "87": {
+        "name": "Orthodox",
+        "description": "EZ:4.7 HD:10.6 IN:14.2\n所属章节:单曲集\n长度:2:21"
+    },
+    "88": {
+        "name": "End Me",
+        "description": "EZ:5.8 HD:7.5 IN:14.3\n所属章节:单曲集\n长度:2:10"
+    },
+    "89": {
+        "name": "Unorthodox Thoughts",
+        "description": "EZ:4.7 HD:11.3 IN:14.4\n所属章节:单曲集\n长度:2:24"
+    },
+    "90": {
+        "name": "Eltaw",
+        "description": "EZ:5.8 HD:10.5 IN:14.4\n所属章节:单曲集\n长度:2:15"
+    },
+    "91": {
+        "name": "狂喜蘭舞",
+        "description": "EZ:6.8 HD:10.8 IN:14.4 Legacy:14.4 AT:16.1\n所属章节:单曲集\n长度:2:42"
+    },
+    "92": {
+        "name": "Parallel Retrogression(Game Ver.)",
+        "description": "EZ:6.8 HD:10.7 IN:14.4\n所属章节:单曲集\n长度:2:23"
+    },
+    "93": {
+        "name": "The Mountain Eater",
+        "description": "EZ:4.3 HD:9.1 IN:14.4\n所属章节:单曲集\n长度:2:30"
+    },
+    "94": {
+        "name": "Find_Me",
+        "description": "EZ:5.7 HD:10.5 IN:14.4\n所属章节:单曲集\n长度:2:08"
+    },
+    "95": {
+        "name": "Drop It from SOUL NOTES",
+        "description": "EZ:3.8 HD:9.6 IN:14.1 Legacy:14.4\n所属章节:单曲集\n长度:3:23"
+    },
+    "96": {
+        "name": "Shadow",
+        "description": "EZ:4.7 HD:10.3 IN:14.5\n所属章节:单曲集\n长度:2:23"
+    },
+    "97": {
+        "name": "MARENOL",
+        "description": "EZ:19 HD:10.2 IN:14.2 Legacy:14.5\n所属章节:单曲集\n长度:2:29"
+    },
+    "98": {
+        "name": "Magenta Potion",
+        "description": "EZ:6.3 HD:11.3 IN:14.5\n所属章节:单曲集\n长度:2:27"
+    },
+    "99": {
+        "name": "Hardcore Kwaya",
+        "description": "EZ:4.3 HD:9.2 IN:14.6\n所属章节:单曲集\n长度:2:01"
+    },
+    "100": {
+        "name": "Cervelle Connexion",
+        "description": "EZ:4.8 HD:11.3 IN:14.5\n所属章节:单曲集\n长度:2:27"
+    },
+    "101": {
+        "name": "Träne",
+        "description": "EZ:1.5 HD:6.7 IN:14.5\n所属章节:单曲集\n长度:2:27"
+    },
+    "102": {
+        "name": "Speed Up!",
+        "description": "EZ:4.3 HD:10.3 IN:14.3\n所属章节:单曲集\n长度:2:21"
+    },
+    "103": {
+        "name": "modulus",
+        "description": "EZ:3.7 HD:10.1 IN:14.7\n所属章节:单曲集\n长度:2:00"
+    },
+    "104": {
+        "name": "Khronostasis Katharsis",
+        "description": "EZ:5.2 HD:10.8 IN:14.2 Legacy:14.7\n所属章节:单曲集\n长度:2:15"
+    },
+    "105": {
+        "name": "大和撫子 -Wild Dances-",
+        "description": "EZ:5.7 HD:11.8 IN:14.8\n所属章节:单曲集\n长度:2:07"
+    },
+    "106": {
+        "name": "Starduster",
+        "description": "EZ:5.6 HD:11.4 IN:15.1\n所属章节:单曲集\n长度:2:10"
+    },
+    "107": {
+        "name": "Burn",
+        "description": "EZ:4.2 HD:10.6 IN:14.8\n所属章节:单曲集\n长度:2:18"
+    },
+    "108": {
+        "name": "Doppelganger",
+        "description": "EZ:4.8 HD:9.4 IN:14.8 Legacy:13.3\n所属章节:单曲集\n长度:2:26"
+    },
+    "109": {
+        "name": "Sein",
+        "description": "EZ:4.6 HD:9.2 IN:14.9\n所属章节:单曲集\n长度:1:59"
+    },
+    "110": {
+        "name": "Better Graphic Animation",
+        "description": "EZ:6.4 HD:11.7 IN:15.3\n所属章节:单曲集\n长度:1:42"
+    },
+    "111": {
+        "name": "energy trixxx",
+        "description": "EZ:4.3 HD:11.4 IN:15.2\n所属章节:单曲集\n长度:2:27"
+    },
+    "112": {
+        "name": "雪降り、メリクリ",
+        "description": "EZ:5.6 HD:9.3 IN:15.3\n所属章节:单曲集\n长度:2:38"
+    },
+    "113": {
+        "name": "Nhelv",
+        "description": "EZ:1.7 HD:11.9 IN:15.4\n所属章节:单曲集\n长度:2:39"
+    },
+    "114": {
+        "name": "Kerberos",
+        "description": "EZ:5.7 HD:12.4 IN:15.4\n所属章节:单曲集\n长度:2:07"
+    },
+    "115": {
+        "name": "Aleph-0",
+        "description": "EZ:4.5 HD:11.6 IN:15.6\n所属章节:单曲集\n长度:2:21"
+    },
+    "116": {
+        "name": "SIGMA",
+        "description": "EZ:4.8 HD:11.5 IN:15.6\n所属章节:单曲集\n长度:2:01"
+    },
+    "117": {
+        "name": "Palescreen",
+        "description": "EZ:5.6 HD:11.8 IN:15.7\n所属章节:单曲集\n长度:2:26"
+    },
+    "118": {
+        "name": "ρars/ey",
+        "description": "EZ:3.6(?) HD:11.3 IN:14.7\n所属章节:单曲集\n长度:2:04"
+    },
+    "119": {
+        "name": "RIPPER",
+        "description": "EZ:7.8 HD:11.2 IN:15.2 Legacy:15.7\n所属章节:单曲集\n长度:3:19"
+    },
+    "120": {
+        "name": "Winter↑Cube↓ (Original mix)",
+        "description": "SP:?\n隐藏曲\n所属章节:Chapter Legacy 过去的章节\n解锁方式：点击曲绘中女孩手上的星星（1.3.0版本后移除）\n长度:2:36"
+    },
+    "121": {
+        "name": "Christmas",
+        "description": "SP:?\n隐藏曲\n所属章节:单曲集\n解锁方式:点击Burn曲绘中女孩的篮子（1.2.4版本限定）\n长度:1:01"
+    },
+    "122": {
+        "name": "Burn(Haocore Mix)",
+        "description": "SP:?\n隐藏曲\n所属章节:单曲集\n解锁方式:点击曲绘中的禁烟标志（1.4.1版本限定且系统时间需为xxxx.4.1）\n长度:2:23"
+    },
+    "123": {
+        "name": "Spasmodic(Haocore Mix)",
+        "description": "SP:?\n隐藏曲\n所属章节:Chapter Legacy 过去的章节\n解锁方式:点击曲目《光》曲绘的中心高亮处（1.6.5版本限定且系统时间需为xxxx.4.1）\n长度:2:20"
+    },
+    "124": {
+        "name": "Introduction (2.0 Ver.)",
+        "description": "EZ:2.0\n长度:2:29\n进入方式:2.0.0版本后除下载后第一次游玩的情况外，可在“设置”→“观看教学”中随时调出"
+    },
+    "125": {
+        "name": "Introduction",
+        "description": "EZ:2.0\n长度:3:06\n进入方式:2.0.0版本前除下载后第一次游玩的情况外，可在“设置”→“观看教学”中随时调出；2.0.0版本后被替换"
+    },
+    "126": {
+        "name": "Anomaly",
+        "description": "EZ:7.5 HD:7.9 IN:14.6\n原属章节:Chapter EX-姜米條 精选集（已删除）\n长度:2:26"
+    },
+    "127": {
+        "name": "Destination",
+        "description": "EZ:3.6 HD:9.4 IN:13.6 AT:15.4\n原属章节:Chapter EX-姜米條 精选集（已删除）\n长度:2:30"
+    },
+    "128": {
+        "name": "Time to Night Sky (feat. Lee Yu Jin)",
+        "description": "EZ:2.7 HD:9.1 IN:13.6\n所属章节:Chapter EX-KALPA 精选集\n长度:2:11"
+    },
+    "129": {
+        "name": "HAZARD",
+        "description": "EZ:3.6 HD:10.9 IN:14.7\n所属章节:Chapter EX-KALPA 精选集\n长度:2:07"
+    },
+    "130": {
+        "name": "Another Me",
+        "description": "EZ:4.8 HD:9.2 IN:15.5\n所属章节:Chapter EX-KALPA 精选集\n长度:2:48"
+    },
+    "131": {
+        "name": "Don't Never Around",
+        "description": "EZ:4.4 HD:11.7 IN:15.6\n所属章节:Chapter EX-KALPA 精选集\n长度:1:59"
+    },
+    "132": {
+        "name": "RESSiSTANCE",
+        "description": "EZ:6.1 HD:10.6 IN:15.8\n所属章节:Chapter EX-KALPA 精选集\n长度:2:29"
+    },
+    "133": {
+        "name": "ジングルベル(Jingle Bell)",
+        "description": "EZ:4.3 HD:7.2 IN:14.5\n所属章节:单曲集\n长度:2:48"
+    },
+    "134": {
+        "name": "Concvssion",
+        "description": "EZ:4.1 HD:10.2 IN:15.5\n所属章节:单曲集\n长度:2:32"
+    },
+    "135": {
+        "name": "Dreamland",
+        "description": "EZ:5.2 HD:9.8 IN:13.1/13.2\n所属章节:单曲集\n长度:2:39\n注:将全部曲目按照难度排序，在Android系统中，其位于万吨匿名信（13.3）和Electron（13.2）之间，而在iOS系统中，其位于Aphasia（13.1）和萤火虫の怨（13.1）之间，因此怀疑该曲在不同的操作系统中定数不同。"
+    },
+    "136": {
+        "name": "Another Round",
+        "description": "EZ:3.2 HD:7.6 IN:13.3\n所属章节:单曲集\n长度:2:32"
+    },
+    "137": {
+        "name": "996",
+        "description": "EZ:3.8 HD:8.3 IN:14.5\n所属章节:单曲集\n长度:2:42"
+    }
 }
