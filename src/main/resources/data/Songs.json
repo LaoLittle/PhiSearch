@@ -517,7 +517,7 @@
     },
     "129": {
         "name": "HAZARD",
-        "description": "EZ:3.6 HD:10.9 IN:14.7\n所属章节:Chapter EX-KALPA 精选集\n长度:2:07"
+        "description": "EZ:3.6 HD:10.9 IN:14.7 SP:?\n所属章节:Chapter EX-KALPA 精选集\n长度:2:07\nSP谱面解锁方式:随意切换难度10次（2.1.4版本限定且系统时间需为2022.4.1）"
     },
     "130": {
         "name": "Another Me",
@@ -550,5 +550,29 @@
     "137": {
         "name": "996",
         "description": "EZ:3.8 HD:8.3 IN:14.5\n所属章节:单曲集\n长度:2:42"
+    },
+    "138": {
+        "name": "Future Mind",
+        "description": "EZ:5.3 HD:11.7 IN:14.6\n所属章节:单曲集\n长度:2:14"
+    },
+    "139": {
+        "name": "Luminescent",
+        "description": "EZ:5.9 HD:9.3 IN:14.4\n所属章节:单曲集\n长度:2:37"
+    },
+    "140": {
+        "name": "FULi AUTO BUSTER",
+        "description": "EZ:4.8 HD:8.6 IN:14.7\n所属章节:单曲集\n长度:2:05"
+    },
+    "141": {
+        "name": "Demiurge",
+        "description": "EZ:1.4 HD:7.4 IN:11.8\n所属章节:Side Story 2 弭刻日\n长度:2:49"
+    },
+    "142": {
+        "name": "Sigma (Haocore Mix) ~ 105秒の伝説 ~",
+        "description": "SP:?\n所属章节:单曲集\n长度:1:45\n解锁方式:按住Sigma选歌区的难度5秒（2.1.4版本限定且系统时间需为2022.4.1）"
+    },
+    "143": {
+        "name": "Sigma (Haocore Mix) ~Regrets of The Yellow Tulip~",
+        "description": "SP:?\n所属章节:单曲集\n长度:2:38\n解锁方式:Sigma (Haocore Mix) ~ 105秒の传说 ~ 得分达到600000到700000或狂点选歌区域标级10下(如果想要通过点击10下标级来游玩该谱面需要先把本谱打到700000分以上)（2.1.4版本限定且系统时间需为2022.4.1）"
     }
 }
